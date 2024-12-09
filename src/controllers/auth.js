@@ -65,7 +65,7 @@ const registerUser = async (req, res) => {
     let transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
-      secure: false,
+      secure: true,
       auth: {
         user: process.env.RECEIVING_EMAIL, 
         pass: process.env.EMAIL_PASSWORD, 
@@ -237,7 +237,7 @@ let html_content="password reset mail";
     let transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
-      secure: false,
+      secure: true,
       auth: {
         user: process.env.RECEIVING_EMAIL, 
         pass: process.env.EMAIL_PASSWORD, 
@@ -401,7 +401,7 @@ const resendOtp = async (req, res) => {
     let transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
-      secure: false,
+      secure: true,
       auth: {
         user: process.env.RECEIVING_EMAIL, 
         pass: process.env.EMAIL_PASSWORD, 

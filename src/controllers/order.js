@@ -166,7 +166,7 @@ const createOrder = async (req, res) => {
     let transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
-      secure: false,
+      secure: true,
       auth: {
         user: process.env.RECEIVING_EMAIL, 
         pass: process.env.EMAIL_PASSWORD, 
